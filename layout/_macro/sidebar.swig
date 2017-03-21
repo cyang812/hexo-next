@@ -64,7 +64,10 @@
             <a href="{{ url_for(theme.rss) }}" rel="alternate">
               <i class="fa fa-rss"></i>
               RSS
-            </a>
+			  </a>
+				{% if theme.highqilai.enabled %}
+				{% include 'high.swig' %}
+				{% endif %}
           </div>
         {% endif %}
 

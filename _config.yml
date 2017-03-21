@@ -11,16 +11,24 @@ keywords: "Hexo, NexT"
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+rss: /atom.xml
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2016/4/21
 
 # Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
 # See: https://support.google.com/webmasters/answer/139066
 # Tips: Before you open this tag, remeber set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
 canonical: true
 
+# next baidu seo
+sitemap: 
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+
+# baidu seo
+url: http://cyang.tech
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -29,10 +37,13 @@ canonical: true
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories
-  #about: /about
-  archives: /archives
+  categories: /categories
   tags: /tags
+  archives: /archives
+  about: http://cyang.tech/aboutme
+  guestbook: /guestbook
+  notes: /notes
+  #photos: http://cyang.tech/aboutme
   #commonweal: /404.html
 
 
@@ -50,6 +61,9 @@ menu_icons:
   tags: tags
   archives: archive
   commonweal: heartbeat
+  guestbook: pencil
+  notes: print
+  photos: photo
 
 
 
@@ -59,10 +73,13 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
-#scheme: Mist
+#scheme: Muse
+scheme: Mist
 #scheme: Pisces
 
+#high
+highqilai:
+  enabled: true
 
 # ---------------------------------------------------------------
 # Font Settings
@@ -120,9 +137,18 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
+social:
   #LinkLabel: Link
-
+  #mail: "http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=5NXR0dTR3dbW3NXWpJWVyoeLiQ"
+  GitHub: https://github.com/cyang812
+  CSDN: http://blog.csdn.net/u011303443/
+  Lofter: http://cy950812.lofter.com/
+  知乎: https://www.zhihu.com/people/cyang812
+  微博: "http://weibo.com/1724789270/"
+ #twitter: "http://twitter.com/1018225817"
+  豆瓣: "https://www.douban.com/people/80271396/"
+  #Instagram: "https://www.instagram.com/c_yang_hen/"
+  #google: "https://plus.google.com/u/0/112557834564375677645"
 
 # Social Links Icons
 # Icon Mapping:
@@ -134,8 +160,16 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
-  Twitter: twitter
-  Weibo: weibo
+  twitter: twitter
+  微博: weibo
+  mail: mail
+  知乎: hand-o-right
+  豆瓣: star-half-full
+  Instagram: instagram
+  google: google
+  Lofter: image
+  CSDN: file-text-o
+  
 
 
 # Sidebar Avatar
@@ -176,11 +210,17 @@ sidebar:
 
 
 # Blogrolls
-#links_title: Links
+links_title: Links
 #links_layout: block
 #links_layout: inline
-#links:
+links:
+  IIssNan: http://notes.iissnan.com/
+  TaterLi's: http://www.lijingquan.net/
+  Login926: https://login926.github.io
+  Aixiu: http://blog.ynxiu.com/
+  一肩月光: http://zwb.io
   #Title: http://example.com/
+  LeoLan: https:///www.leolan.top
 
 
 # ---------------------------------------------------------------
@@ -201,7 +241,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night eighties
 
 
 # Automatically scroll page to section which is under <!-- more --> mark.
@@ -216,10 +256,10 @@ auto_excerpt:
 
 
 # Wechat Subscriber
-#wechat_subscriber:
-  #enabled: true
-  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-  #description: ex. subscribe to my blog by scanning my public wechat account
+wechat_subscriber:
+  enabled: true
+  qcode: /uploads/公号QR.png
+  description: 一码不扫，何以扫天下
 
 
 
@@ -230,7 +270,7 @@ auto_excerpt:
 
 # MathJax Support
 mathjax:
-  enable: false
+  enable: true
   cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 
@@ -238,7 +278,7 @@ mathjax:
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: f8595c23abcd628eecc5cf21b38889d4
 
 # Duoshuo ShortName
 #duoshuo_shortname:
@@ -249,15 +289,15 @@ mathjax:
 # Baidu Share
 # Available value:
 #    button | slide
-#baidushare:
+#baidushare: true
 ##  type: button
 
 # Share
-#jiathis:
+#jiathis: true
 #add_this_id:
 
 # Share
-#duoshuo_share: true
+duoshuo_share: true
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
@@ -265,7 +305,7 @@ mathjax:
 
 
 # Google Analytics
-#google_analytics:
+google_analytics: 83208485-1
 
 # CNZZ count
 #cnzz_siteid:
@@ -277,8 +317,8 @@ mathjax:
 duoshuo_info:
   ua_enable: true
   admin_enable: false
-  user_id: 0
-  #admin_nickname: Author
+  user_id: 8931150
+  admin_nickname: cyang
 
 
 # Facebook SDK Support.
@@ -303,15 +343,15 @@ facebook_comments_plugin:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: 7QT9UfSNuPzsorD5zHtgsrmN-gzGzoHsz
+  app_key: 43Vf8xUKA5dQy0V65jgHDG6u
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   # count values only if the other configs are false
-  enable: false
+  enable: true
   # custom uv span for the whole site
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i>
@@ -326,10 +366,11 @@ busuanzi_count:
   page_pv_footer:
 
 # Tencent analytics ID
-# tencent_analytics:
+tencent_analytics: 58093008
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
+
 
 
 
@@ -391,6 +432,11 @@ vendors:
 css: css
 js: js
 images: images
+
+# Donate
+reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+wechatpay: 
+alipay: 
 
 # Theme version
 version: 5.0.1

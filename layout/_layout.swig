@@ -71,6 +71,8 @@
   {% include '_scripts/third-party/mathjax.swig' %}
   {% include '_scripts/third-party/lean-analytics.swig' %}
   {% include '_scripts/baidu-push.swig' %}
+  <script type="text/javascript" src="/js/src/love.js"></script>
+  <!-- <script type="text/javascript" src="/js/src/particles.js" count="200" zindex="-1" opacity="1" color="255,84,84"></script> -->
 
 </body>
 </html>
