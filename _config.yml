@@ -258,7 +258,7 @@ auto_excerpt:
 
 # Wechat Subscriber
 wechat_subscriber:
-  enabled: true
+  enabled: false
   qcode: /uploads/公号QR.png
   description: 一码不扫，何以扫天下
 
