@@ -13,7 +13,7 @@
 
     {% if not headlessPost %}
       <header class="post-header">
-
+        
         {# Not to show title for quote posts that do not have a title #}
         {% if not (is_index and post.type === 'quote' and not post.title) %}
           <h1 class="post-title" itemprop="name headline">

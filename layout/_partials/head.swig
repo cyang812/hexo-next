@@ -68,6 +68,21 @@
   <meta property="fb:app_id" content="{{ theme.facebook_sdk.app_id }}" />
 {% endif %}
 
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+    	background: #FBC02D; /*进度条颜色*/
+    	height: 3px;
+    }
+    .pace .pace-progress-inner {
+     	box-shadow: 0 0 10px #FBC02D, 0 0 5px #FBC02D; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+    	border-top-color: #FBC02D;	/*上边框颜色*/
+    	border-left-color: #FBC02D;	/*左边框颜色*/
+    }
+  </style>
 
 {{
   open_graph({
